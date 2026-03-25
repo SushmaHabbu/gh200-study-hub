@@ -1,0 +1,19 @@
+name: reusable
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+jobs:
+  reusablejob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: |
+           echo "Hello ${{ inputs.name }}"
+           echo "Welcome to GitHub Actions"
+      - name: Print goodbye
+        run: |
+          echo "Good Bye ${{ inputs.name }}"
+          echo "See you next time"
