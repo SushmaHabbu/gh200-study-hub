@@ -1,0 +1,8 @@
+name: call reusable
+on:
+  workflow_dispatch 
+jobs:
+  callreusable:
+    uses: ./.github/workflows/demo-reuse.yml
+    with:
+      name: "GitHub Actions"
